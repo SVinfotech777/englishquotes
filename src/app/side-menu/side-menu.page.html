@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button style="color: #fff !important;"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="main-title" style="color: #fff !important;">Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: #C6A4A3 !important;">
+  <ion-grid>
+    <ion-row *ngFor="let p of appPages; let i = index" (click)="selectIndex(p)"
+      [class.selected]="alertService.selectedIndex == i" class="menu-items" style="margin-bottom: 8px;border-radius: 10px;">
+      <ion-col size="2" class="menu-items" style="border-radius: 10px 0px 0px 10px;"
+      [class.selected]="alertService.selectedIndex == i">
+        <ion-icon [name]="p.icon" class="sidemenu-icon"></ion-icon>
+      </ion-col>
+      <ion-col size="10" [class.selected]="alertService.selectedIndex == i"
+       class="menu-items" style="border-radius: 0px 10px 10px 0px;">
+        <p class="side-menu-title">{{ p.title }}</p>
+        <span class="side-menu-item-subtitle">{{p.subTitle}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

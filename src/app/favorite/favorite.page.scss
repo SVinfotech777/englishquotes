@@ -1,0 +1,38 @@
+@import "../../common.scss";
+
+.main-title {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  color: $titleFontColor;
+}
+
+ion-title {
+  .toolbar-title {
+    font-weight: bold !important;
+  }
+}
+
+.shayari-subtitle {
+  white-space: initial;
+  text-align: center;
+  font-size: 20px;
+  color: #7c6b6b !important;
+}
+
+.back-icon {
+  width: 24px;
+  height: 27px;
+  margin-top: 7px;
+  margin-left: 10px;
+  color: $whiteColor;
+}
+
+.error-msg {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: $whiteColor;
+}

@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-icon name="close" class="settings-icon" 
+    style="left: 16px !important;right: unset !important;" (click)="closeApp()"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-menu-button class="menu-icon"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="shayari-main-title">Categories</ion-title>
+    <ion-icon name="heart" class="settings-icon" style="right: 55px !important;top: 52% !important;" (click)="openFavoritePage()"></ion-icon>
+    <ion-icon name="settings" class="settings-icon" (click)="openSettingsPage()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--padding-bottom: 56px !important;" *ngIf="isShow">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let category of categories">
+        <ion-card style="margin: 0px;background: #C6A4A3;border-radius: 10px;" (click)="openShayariList(category)">
+          <ion-card-content style="padding: 7px 16px !important;">
+            <img *ngIf="category && category.url" [src]="category.url" class="category-icon">
+            <p class="category-name">{{category.name}}</p>
+            <ion-icon name="chevron-forward-outline" class="right-arrow-icon"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="categories && categories.length == 0" style="position: relative;height: 100%;width: 100%;">
+    <ion-row style="position: absolute;top: 50%;transform: translateY(-50%);text-align: center;width: 100%;font-size: 27px;">
+      <ion-col size="12">
+        <p style="font-size: 18px;">You have not any categories yet!</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

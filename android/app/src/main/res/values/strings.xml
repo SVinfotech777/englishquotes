@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">English Quotes</string>
+    <string name="title_activity_main">English Quotes</string>
+    <string name="package_name">com.englishquotes.app</string>
+    <string name="custom_url_scheme">com.englishquotes.app</string>
+    <string name="admob_app_id">ca-app-pub-3228515841874235~8937607007</string>
+</resources>

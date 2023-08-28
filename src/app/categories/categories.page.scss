@@ -1,0 +1,41 @@
+@import "../../common.scss";
+
+.menu-icon {
+  color: $whiteColor !important;
+}
+
+.category-name {
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.category-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-top: 5px;
+  border: 2px solid $whiteColor;
+}
+
+.right-arrow-icon {
+  color: $whiteColor;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.settings-icon {
+  font-size: 26px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
+  color: $whiteColor;
+}

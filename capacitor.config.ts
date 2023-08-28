@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'englishQuotes',
+  appId: 'com.englishquotes.app',
+  appName: 'English Quotes',
   webDir: 'www',
   bundledWebRuntime: false
 };

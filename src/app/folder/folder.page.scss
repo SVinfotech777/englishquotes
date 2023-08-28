@@ -1,28 +1,39 @@
-ion-menu-button {
-  color: var(--ion-color-primary);
+@import "../../common.scss";
+
+.main-title {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  color: $titleFontColor;
+  font-family: "Roboto Medium";
 }
 
-#container {
+ion-title {
+  .toolbar-title {
+    font-weight: bold !important;
+  }
+}
+
+.shayari-subtitle {
+  white-space: initial;
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
   font-size: 20px;
-  line-height: 26px;
+  color: #7c6b6b !important;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
+.back-icon {
+  width: 24px;
+  height: 27px;
+  margin-top: 7px;
+  margin-left: 10px;
+  color: $whiteColor;
 }
 
-#container a {
-  text-decoration: none;
+.error-msg {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: $whiteColor;
 }

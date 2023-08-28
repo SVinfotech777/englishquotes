@@ -24,3 +24,12 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.profile-popover .popover-content{
+    margin: 0 auto !important;
+    right: 5px !important;
+    top: 50px !important;
+    left: initial !important;
+    width: 150px;
+    border-radius: 0px;
+}

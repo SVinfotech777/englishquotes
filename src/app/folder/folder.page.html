@@ -1,21 +1,60 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon name="arrow-back-outline" class="back-icon" (click)="gotoBack()"></ion-icon>
+    <ion-title class="shayari-main-title" *ngIf="categoryData && categoryData.name">{{categoryData.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">{{ folder }}</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" style="--padding-bottom: 56px !important" *ngIf="isShow">
+  <ion-grid>
+    <ion-row> 
+      <ion-col size="12" *ngFor="let shayari of filterList;let i=index">
+        <ion-card style="margin: 0px;border-radius: 10px;">
+          <ion-card-content style="position: relative; padding: 15px 0px 0px !important">
+            <p class="shayari-subtitle" style="padding: 0px 15px 10px;" [innerHTML]="shayari.name"></p>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+            <ion-grid style="background: #C6A4A3">
+              <ion-row style="display: flex;justify-content: center;">
+                <ion-col style="text-align: center;" class="vertical_centr" (click)="copyClipboard(shayari)">
+                  <ion-icon name="copy-outline" class="social-icon"></ion-icon>
+                </ion-col>
+                <ion-col style="text-align: center;" class="vertical_centr" (click)="speak(shayari)" *ngIf="!shayari.isPlay">
+                  <ion-icon name="play-circle-outline" class="social-icon"></ion-icon>
+                </ion-col>
+                <ion-col style="text-align: center;" class="vertical_centr" (click)="stopSpeaking(shayari)" *ngIf="shayari.isPlay">
+                  <ion-icon name="pause-circle-outline" class="social-icon"></ion-icon>
+                </ion-col>
+                <ion-col style="text-align: center;" class="vertical_centr" (click)="favorite(shayari)">
+                  <ion-icon name="heart-outline" class="social-icon" *ngIf="!shayari.isFav"></ion-icon>
+                  <ion-icon name="heart" class="social-icon" *ngIf="shayari.isFav"></ion-icon>
+                </ion-col>
+                <ion-col style="text-align: center;" class="vertical_centr" (click)="socialShare(shayari)">
+                  <ion-icon name="share-social-outline" class="social-icon"></ion-icon>
+                </ion-col>
+                
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <ion-grid *ngIf="filterList && filterList.length == 0" style="position: relative; height: 100%; width: 100%">
+    <ion-row style="
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        font-size: 27px;
+      ">
+      <ion-col size="12">
+        <p class="error-msg">
+          Shayari Not Available!
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

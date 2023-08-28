@@ -1,0 +1,38 @@
+ion-header::after {
+    background-image: none !important;
+}
+
+.side-menu-title {
+    margin: 0px 0px 5px !important;
+    color: #eef2f9 !important;
+    font-weight: bold !important;
+}
+
+.side-menu-item-subtitle {
+    color: #eef2f9 !important;
+    font-size: 13px;
+}
+
+.menu-items {
+    background: transparent !important;
+    color: #eef2f9 !important;
+}
+
+.sidemenu-icon {
+    width: 35px;
+    margin-right: 25px;
+    color: #eef2f9;
+    height: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-items.selected {
+    color: #C6A4A3 !important;
+    background: #836e6e !important;
+
+    .side-menu-title, .side-menu-item-subtitle, .sidemenu-icon {
+        color: #eef2f9 !important;
+    }
+}
