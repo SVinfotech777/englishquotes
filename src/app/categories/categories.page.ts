@@ -126,7 +126,7 @@ export class CategoriesPage {
   }
 
   closeApp() {
-    navigator['app'].exitApp();
+    (navigator as any).app.exitApp();
   }
 
   openFavoritePage() {

@@ -1,7 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
+  namespace "com.englishquotes.app"
+  compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
         applicationId "com.englishquotes.app"
         minSdkVersion rootProject.ext.minSdkVersion

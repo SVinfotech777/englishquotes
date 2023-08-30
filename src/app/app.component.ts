@@ -42,7 +42,7 @@ export class AppComponent {
           {
             text: 'Exit',
             handler: () => {
-              navigator['app'].exitApp();
+              (navigator as any).app.exitApp();
             },
           },
         ],
@@ -82,7 +82,7 @@ export class AppComponent {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            navigator['app'].exitApp();
+            (navigator as any).app.exitApp();
           },
         },
       ],
