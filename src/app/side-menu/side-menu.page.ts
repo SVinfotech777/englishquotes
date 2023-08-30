@@ -2,11 +2,15 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Share } from '@capacitor/share';
 import { AlertService } from '../provider/alert.service';
+import { NgFor } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-side-menu',
-  templateUrl: './side-menu.page.html',
-  styleUrls: ['./side-menu.page.scss'],
+    selector: 'app-side-menu',
+    templateUrl: './side-menu.page.html',
+    styleUrls: ['./side-menu.page.scss'],
+    standalone: true,
+    imports: [IonicModule, NgFor],
 })
 export class SideMenuPage {
 

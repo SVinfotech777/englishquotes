@@ -9,16 +9,23 @@ import {
   BannerAdSize,
 } from '@capacitor-community/admob';
 import { Preferences } from '@capacitor/preferences';
-import { NavController } from '@ionic/angular';
+import { NavController, IonicModule } from '@ionic/angular';
 import { environment } from 'src/environments/environment';
 
 import { base_URL } from '../app-constant';
 import { AlertService } from '../provider/alert.service';
+import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-  selector: 'app-categories',
-  templateUrl: './categories.page.html',
-  styleUrls: ['./categories.page.scss'],
+    selector: 'app-categories',
+    templateUrl: './categories.page.html',
+    styleUrls: ['./categories.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgIf,
+        NgFor,
+    ],
 })
 export class CategoriesPage {
   categories: any[] = [];

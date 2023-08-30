@@ -16,11 +16,19 @@ import { Share } from '@capacitor/share';
 import { environment } from 'src/environments/environment';
 
 import { AlertService } from '../provider/alert.service';
+import { NgIf, NgFor } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-favorite',
-  templateUrl: './favorite.page.html',
-  styleUrls: ['./favorite.page.scss'],
+    selector: 'app-favorite',
+    templateUrl: './favorite.page.html',
+    styleUrls: ['./favorite.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgIf,
+        NgFor,
+    ],
 })
 export class FavoritePage implements OnInit {
   categoryData: any;

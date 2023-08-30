@@ -1,12 +1,14 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { Network } from '@capacitor/network';
-import { AlertController, Platform } from '@ionic/angular';
+import { AlertController, Platform, IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss'],
+    standalone: true,
+    imports: [IonicModule],
 })
 export class AppComponent {
   constructor(

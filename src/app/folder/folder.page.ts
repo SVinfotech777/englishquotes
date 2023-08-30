@@ -18,11 +18,19 @@ import { environment } from 'src/environments/environment';
 
 import { base_URL } from '../app-constant';
 import  { AlertService } from '../provider/alert.service';
+import { NgIf, NgFor } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-folder',
-  templateUrl: './folder.page.html',
-  styleUrls: ['./folder.page.scss'],
+    selector: 'app-folder',
+    templateUrl: './folder.page.html',
+    styleUrls: ['./folder.page.scss'],
+    standalone: true,
+    imports: [
+        IonicModule,
+        NgIf,
+        NgFor,
+    ],
 })
 export class FolderPage implements OnInit {
   categoryData: any;
