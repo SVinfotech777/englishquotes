@@ -96,7 +96,7 @@ export class CategoriesPage {
         adSize: BannerAdSize.FULL_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: 0,
-        isTesting: !environment.production,
+        isTesting: true,
       };
       AdMob.showBanner(options).then(() => {
         this.isShowBanner = true;

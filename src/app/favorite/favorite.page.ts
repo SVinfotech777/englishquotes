@@ -52,7 +52,7 @@ export class FavoritePage implements OnInit {
         adSize: BannerAdSize.FULL_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: 0,
-        isTesting: !environment.production,
+        isTesting: true,
       };
       AdMob.showBanner(options).then(() => {
         this.isShowBanner = true;
@@ -168,7 +168,7 @@ export class FavoritePage implements OnInit {
   async showInterstitial() {
     const options: AdOptions = {
       adId: 'ca-app-pub-3228515841874235/7160092108',
-      isTesting: !environment.production,
+      isTesting: true,
     };
     await AdMob.prepareInterstitial(options);
     await AdMob.showInterstitial();

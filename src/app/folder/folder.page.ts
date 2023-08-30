@@ -47,7 +47,7 @@ export class FolderPage implements OnInit {
   async showInterstitial() {
     const options: AdOptions = {
       adId: 'ca-app-pub-3228515841874235/8618042809',
-      isTesting: !environment.production
+      isTesting: true
     };
     await AdMob.prepareInterstitial(options);
     await AdMob.showInterstitial();
@@ -125,7 +125,7 @@ export class FolderPage implements OnInit {
         adSize: BannerAdSize.FULL_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: 0,
-        isTesting: !environment.production
+        isTesting: true
       };
       AdMob.showBanner(options).then(
         () => {
