@@ -181,6 +181,7 @@ export class FolderPage implements OnInit {
 
   // Copy quote
   copyClipboard(shayari: any) {
+    this.alertService.presentToast("Copied")
     Clipboard.write({ string: this.alertService.removeBrFromStr(shayari.name) });
   }
 

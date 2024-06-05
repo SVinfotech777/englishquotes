@@ -108,7 +108,8 @@ export class CategoriesPage {
       AdMob.showBanner(options).then(() => {
         this.isShowBanner = true;
       });
-    } catch (err) {}
+    } catch (err) {
+    console.log('err: ', err)};
   }
 
   ngOnDestroy() {

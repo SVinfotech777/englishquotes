@@ -42,9 +42,11 @@ export class AlertService {
   async presentToast(msg?: any) {
     const toast = await this.toastCtrl.create({
       message: msg,
+      mode: "ios",
       duration: 3000,
-      position: "bottom",
-      cssClass: "common-toast"
+      position: "top",
+      cssClass: "common-toast",
+      color: "success"
     });
     toast.present();
   }
