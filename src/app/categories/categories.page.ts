@@ -99,11 +99,11 @@ export class CategoriesPage {
   banner() {
     try {
       const options: BannerAdOptions = {
-        adId: 'ca-app-pub-3228515841874235/2717450061',
+        adId: 'ca-app-pub-9420845655611163/4623918201',
         adSize: BannerAdSize.FULL_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: 0,
-        isTesting: true,
+        isTesting: false,
       };
       AdMob.showBanner(options).then(() => {
         this.isShowBanner = true;

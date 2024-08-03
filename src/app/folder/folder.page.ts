@@ -54,8 +54,8 @@ export class FolderPage implements OnInit {
 
   async showInterstitial() {
     const options: AdOptions = {
-      adId: 'ca-app-pub-3228515841874235/8618042809',
-      isTesting: true
+      adId: 'ca-app-pub-9420845655611163/4216724095',
+      isTesting: false
     };
     await AdMob.prepareInterstitial(options);
     await AdMob.showInterstitial();
@@ -129,11 +129,11 @@ export class FolderPage implements OnInit {
   banner() {
     try {
       const options: BannerAdOptions = {
-        adId: 'ca-app-pub-3228515841874235/7778205051',
+        adId: 'ca-app-pub-9420845655611163/9385290299',
         adSize: BannerAdSize.FULL_BANNER,
         position: BannerAdPosition.BOTTOM_CENTER,
         margin: 0,
-        isTesting: true
+        isTesting: false
       };
       AdMob.showBanner(options).then(
         () => {
